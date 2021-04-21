@@ -12,6 +12,8 @@ def deposit(num1, num2):
     print("Deposit", num1, '\n', "New balance", num2)
     return num2
     
+    
+    
 # Does the function
 def main():
     # Example pin to access the user's account detail
@@ -34,7 +36,7 @@ def main():
     else:
         print("Pin incorrect. Please try again. ")
     
-    # Asks for user to enter a withdrawal amount
+    # Asks for user to enter a deposit amount
     depositAmount = float(input("Enter depositAmount amount: "))
     # Does the withdrawal function
     deposit(depositAmount, balance)
