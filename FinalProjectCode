@@ -1,0 +1,43 @@
+# Checks the input pin versus the account pin
+def pinSecurity(pin, userPin):
+    if pin == userPin:
+        return True
+    else:
+        return False
+
+
+# Deposits the amount from the user from the account balance
+def deposit(num1, num2):
+    num2 += num1
+    print("Deposit", num1, '\n', "New balance", num2)
+    return num2
+    
+# Does the function
+def main():
+    # Example pin to access the user's account detail
+    userPin = 3260
+    name = "Dr. Long, Yuan" #str(input("Enter user's full name: "))
+    DoB = "04/20/1982" #str(input("Enter user's date of birth (e.g. MM/DD/YYYY): "))
+    phoneNum = "404-413-7385" #str(input("Enter user's phone number (e.g. XXX-XXX-XXXX): "))
+    balance = 50000
+    # Establishes the list of the account's details
+    userDetails = [userPin, name, DoB, phoneNum, "Current balance:", balance]
+    
+    # Asks for the user to enter a 4-digit pin to access an account. Maybe add in other accounts to see other account details.
+    pin = int(input("Enter 4-digit pin: "))
+    # Checks the pin validation
+    pinValidation = pinSecurity(pin, userPin)
+    
+    # If the pin matches with the account, display the account detail, otherwise, don't.
+    if pinValidation == True:
+        print(userDetails[1:6])
+    else:
+        print("Pin incorrect. Please try again. ")
+    
+    # Asks for user to enter a withdrawal amount
+    depositAmount = float(input("Enter depositAmount amount: "))
+    # Does the withdrawal function
+    deposit(depositAmount, balance)
+    
+# Executes code
+main()
