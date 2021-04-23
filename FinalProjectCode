@@ -38,7 +38,7 @@ def main():
     
     # Asks for user to enter a deposit amount
     depositAmount = float(input("Enter depositAmount amount: "))
-    # Does the withdrawal function
+    # Does the deposit function
     deposit(depositAmount, balance)
     
 # Executes code
